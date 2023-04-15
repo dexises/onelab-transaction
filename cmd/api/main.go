@@ -13,7 +13,6 @@ import (
 	"onelab/internal/transport/http"
 	"onelab/internal/transport/http/handler"
 
-	_ "github.com/joho/godotenv/autoload"
 )
 
 func main() {

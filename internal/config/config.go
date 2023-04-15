@@ -2,6 +2,8 @@ package config
 
 import (
 	"os"
+
+	_ "github.com/joho/godotenv/autoload"
 )
 
 type Config struct {
@@ -30,7 +32,7 @@ func New() *Config {
 
 	cfg.JwtToken = getEnv("JwtTokenSecret", "abracadabra")
 
-	cfg.DB.Host = getEnv("DB_HOST", "localhost")
+	cfg.DB.Host = getEnv("DB_HOST", "postgres")
 	cfg.DB.Port = getEnv("DB_PORT", "5432")
 	cfg.DB.User = getEnv("DB_USER", "postgres")
 	cfg.DB.Password = getEnv("DB_PASS", "postgres")
